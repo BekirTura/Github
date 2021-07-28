@@ -24,6 +24,27 @@
 		1769442226B153D500BD1697 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769442126B153D500BD1697 /* RestClient.swift */; };
 		1769442526B1577100BD1697 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769442426B1577100BD1697 /* BaseView.swift */; };
 		1769442826B157C300BD1697 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769442726B157C200BD1697 /* BaseImageView.swift */; };
+		1769443026B1587500BD1697 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769442E26B1587500BD1697 /* SearchViewController.swift */; };
+		1769443326B158FF00BD1697 /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443226B158FF00BD1697 /* SearchViewRouter.swift */; };
+		1769443626B1592300BD1697 /* SearchViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443526B1592300BD1697 /* SearchViewContracts.swift */; };
+		1769443826B1593C00BD1697 /* SearchViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443726B1593C00BD1697 /* SearchViewInteractor.swift */; };
+		1769443A26B1595100BD1697 /* SearchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443926B1595100BD1697 /* SearchViewPresenter.swift */; };
+		1769443C26B15A2400BD1697 /* BaseListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443B26B15A2400BD1697 /* BaseListDTO.swift */; };
+		1769443E26B15A9C00BD1697 /* BaseOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443D26B15A9C00BD1697 /* BaseOutputProtocol.swift */; };
+		1769444026B15B8300BD1697 /* BaseViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769443F26B15B8300BD1697 /* BaseViewPresenterProtocol.swift */; };
+		1769444226B15BAF00BD1697 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444126B15BAF00BD1697 /* BaseViewProtocol.swift */; };
+		1769444426B15BD000BD1697 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444326B15BD000BD1697 /* BasePresenter.swift */; };
+		1769444726B15C0700BD1697 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444626B15C0700BD1697 /* UIViewController+Extension.swift */; };
+		1769444A26B15C4100BD1697 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444926B15C4100BD1697 /* BaseViewController.swift */; };
+		1769444C26B15CD600BD1697 /* BaseViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444B26B15CD600BD1697 /* BaseViewInteractor.swift */; };
+		1769444E26B1614B00BD1697 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769444D26B1614B00BD1697 /* UITableView+Extension.swift */; };
+		1769445726B163D000BD1697 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1769445526B163D000BD1697 /* SearchCell.xib */; };
+		1769445826B163D000BD1697 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769445626B163D000BD1697 /* SearchCell.swift */; };
+		1769445A26B167CA00BD1697 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769445926B167CA00BD1697 /* UIImageView+Extension.swift */; };
+		1769445D26B1697300BD1697 /* RepoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769445C26B1697300BD1697 /* RepoPresentation.swift */; };
+		1769446526B18B0600BD1697 /* SearchRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1769446326B18B0600BD1697 /* SearchRepoCell.swift */; };
+		1769446626B18B0600BD1697 /* SearchRepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1769446426B18B0600BD1697 /* SearchRepoCell.xib */; };
+		1769446A26B1906600BD1697 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1769446926B1906600BD1697 /* Search.storyboard */; };
 		4EEC86D1AC45873032FAAE92 /* Pods_Github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07395771CE90E6FFE3F7B5 /* Pods_Github.framework */; };
 		9C4FC5A3D4E2EDF849B00BAA /* Pods_GithubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB779AACF8E146809D41AB46 /* Pods_GithubTests.framework */; };
 		BD08C92F59CE9EFD2F095115 /* Pods_Github_GithubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821B215B02ED5E24CA9A3C90 /* Pods_Github_GithubUITests.framework */; };
@@ -70,6 +91,27 @@
 		1769442126B153D500BD1697 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		1769442426B1577100BD1697 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		1769442726B157C200BD1697 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
+		1769442E26B1587500BD1697 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1769443226B158FF00BD1697 /* SearchViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouter.swift; sourceTree = "<group>"; };
+		1769443526B1592300BD1697 /* SearchViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewContracts.swift; sourceTree = "<group>"; };
+		1769443726B1593C00BD1697 /* SearchViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewInteractor.swift; sourceTree = "<group>"; };
+		1769443926B1595100BD1697 /* SearchViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewPresenter.swift; sourceTree = "<group>"; };
+		1769443B26B15A2400BD1697 /* BaseListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListDTO.swift; sourceTree = "<group>"; };
+		1769443D26B15A9C00BD1697 /* BaseOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOutputProtocol.swift; sourceTree = "<group>"; };
+		1769443F26B15B8300BD1697 /* BaseViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		1769444126B15BAF00BD1697 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		1769444326B15BD000BD1697 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		1769444626B15C0700BD1697 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		1769444926B15C4100BD1697 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1769444B26B15CD600BD1697 /* BaseViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewInteractor.swift; sourceTree = "<group>"; };
+		1769444D26B1614B00BD1697 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1769445526B163D000BD1697 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		1769445626B163D000BD1697 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		1769445926B167CA00BD1697 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		1769445C26B1697300BD1697 /* RepoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresentation.swift; sourceTree = "<group>"; };
+		1769446326B18B0600BD1697 /* SearchRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoCell.swift; sourceTree = "<group>"; };
+		1769446426B18B0600BD1697 /* SearchRepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRepoCell.xib; sourceTree = "<group>"; };
+		1769446926B1906600BD1697 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		29298F62851C366C62DDFE06 /* Pods-Github-GithubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-GithubUITests.release.xcconfig"; path = "Target Support Files/Pods-Github-GithubUITests/Pods-Github-GithubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52E8CF8EAB2E445F3A20ABB9 /* Pods-Github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github.debug.xcconfig"; path = "Target Support Files/Pods-Github/Pods-Github.debug.xcconfig"; sourceTree = "<group>"; };
 		6FED22A27E1D44BB16358197 /* Pods-GithubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubTests/Pods-GithubTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +214,10 @@
 		1769440626B14ACB00BD1697 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				1769444526B15BD400BD1697 /* Protocol */,
+				1769444326B15BD000BD1697 /* BasePresenter.swift */,
+				1769444926B15C4100BD1697 /* BaseViewController.swift */,
+				1769444B26B15CD600BD1697 /* BaseViewInteractor.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -190,6 +236,8 @@
 		1769440826B14ADA00BD1697 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1769446B26B191A100BD1697 /* RepoDetail */,
+				1769442B26B1582C00BD1697 /* Search */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -206,6 +254,9 @@
 		1769440A26B14AEE00BD1697 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1769444626B15C0700BD1697 /* UIViewController+Extension.swift */,
+				1769444D26B1614B00BD1697 /* UITableView+Extension.swift */,
+				1769445926B167CA00BD1697 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -232,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				1769441026B14B5E00BD1697 /* Repo */,
+				1769443B26B15A2400BD1697 /* BaseListDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -239,6 +291,7 @@
 		1769440F26B14B4900BD1697 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1769445B26B1696900BD1697 /* Repo */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -304,8 +357,66 @@
 		1769442926B157F800BD1697 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1769446026B18ACA00BD1697 /* SearchRepoCell */,
+				1769445426B163D000BD1697 /* SearchCell */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1769442B26B1582C00BD1697 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1769442E26B1587500BD1697 /* SearchViewController.swift */,
+				1769443926B1595100BD1697 /* SearchViewPresenter.swift */,
+				1769443726B1593C00BD1697 /* SearchViewInteractor.swift */,
+				1769443226B158FF00BD1697 /* SearchViewRouter.swift */,
+				1769443526B1592300BD1697 /* SearchViewContracts.swift */,
+				1769446926B1906600BD1697 /* Search.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1769444526B15BD400BD1697 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1769443D26B15A9C00BD1697 /* BaseOutputProtocol.swift */,
+				1769443F26B15B8300BD1697 /* BaseViewPresenterProtocol.swift */,
+				1769444126B15BAF00BD1697 /* BaseViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1769445426B163D000BD1697 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				1769445526B163D000BD1697 /* SearchCell.xib */,
+				1769445626B163D000BD1697 /* SearchCell.swift */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		1769445B26B1696900BD1697 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				1769445C26B1697300BD1697 /* RepoPresentation.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		1769446026B18ACA00BD1697 /* SearchRepoCell */ = {
+			isa = PBXGroup;
+			children = (
+				1769446326B18B0600BD1697 /* SearchRepoCell.swift */,
+				1769446426B18B0600BD1697 /* SearchRepoCell.xib */,
+			);
+			path = SearchRepoCell;
+			sourceTree = "<group>";
+		};
+		1769446B26B191A100BD1697 /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepoDetail;
 			sourceTree = "<group>";
 		};
 		27C90D04199E888FDFF09D47 /* Pods */ = {
@@ -440,8 +551,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				176943E326B148CB00BD1697 /* LaunchScreen.storyboard in Resources */,
+				1769446626B18B0600BD1697 /* SearchRepoCell.xib in Resources */,
 				176943E026B148CA00BD1697 /* Assets.xcassets in Resources */,
+				1769446A26B1906600BD1697 /* Search.storyboard in Resources */,
 				176943DE26B148C700BD1697 /* Main.storyboard in Resources */,
+				1769445726B163D000BD1697 /* SearchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,17 +684,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				1769441426B14BB800BD1697 /* RepoOwnerDTO.swift in Sources */,
+				1769444C26B15CD600BD1697 /* BaseViewInteractor.swift in Sources */,
+				1769443826B1593C00BD1697 /* SearchViewInteractor.swift in Sources */,
+				1769444026B15B8300BD1697 /* BaseViewPresenterProtocol.swift in Sources */,
 				1769441A26B151DA00BD1697 /* SearchRepoRequest.swift in Sources */,
 				176943DB26B148C700BD1697 /* ViewController.swift in Sources */,
+				1769444A26B15C4100BD1697 /* BaseViewController.swift in Sources */,
+				1769443C26B15A2400BD1697 /* BaseListDTO.swift in Sources */,
+				1769443626B1592300BD1697 /* SearchViewContracts.swift in Sources */,
+				1769445826B163D000BD1697 /* SearchCell.swift in Sources */,
+				1769444726B15C0700BD1697 /* UIViewController+Extension.swift in Sources */,
+				1769446526B18B0600BD1697 /* SearchRepoCell.swift in Sources */,
+				1769443326B158FF00BD1697 /* SearchViewRouter.swift in Sources */,
 				1769441226B14B7100BD1697 /* RepoDTO.swift in Sources */,
 				1769441D26B1525100BD1697 /* UserRequest.swift in Sources */,
 				176943D726B148C700BD1697 /* AppDelegate.swift in Sources */,
+				1769444226B15BAF00BD1697 /* BaseViewProtocol.swift in Sources */,
 				176943D926B148C700BD1697 /* SceneDelegate.swift in Sources */,
+				1769443A26B1595100BD1697 /* SearchViewPresenter.swift in Sources */,
 				1769442826B157C300BD1697 /* BaseImageView.swift in Sources */,
+				1769443E26B15A9C00BD1697 /* BaseOutputProtocol.swift in Sources */,
+				1769443026B1587500BD1697 /* SearchViewController.swift in Sources */,
 				1769441F26B1536E00BD1697 /* UserRepoRequest.swift in Sources */,
 				1769442226B153D500BD1697 /* RestClient.swift in Sources */,
 				1769442526B1577100BD1697 /* BaseView.swift in Sources */,
 				1769441726B14BFB00BD1697 /* BaseApiRequest.swift in Sources */,
+				1769444426B15BD000BD1697 /* BasePresenter.swift in Sources */,
+				1769445D26B1697300BD1697 /* RepoPresentation.swift in Sources */,
+				1769445A26B167CA00BD1697 /* UIImageView+Extension.swift in Sources */,
+				1769444E26B1614B00BD1697 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

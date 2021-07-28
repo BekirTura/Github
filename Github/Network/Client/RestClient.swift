@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 
 protocol RestClientable {
-    func sendRequest<T:Codable>(_ request:BaseApiRequest,_ type :T.Type,successHandler:@escaping(T?)->(),failHandler:@escaping(Error?,String?)->())
+    func sendRequest<T:Decodable>(_ request:BaseApiRequest,_ type :T.Type,successHandler:@escaping(T?)->(),failHandler:@escaping(Error?,String?)->())
 }
 
 class RestClient: RestClientable{
     static let sharedInstance:RestClient = RestClient.init()
     private init() {}
-    func sendRequest<T:Codable>(_ request:BaseApiRequest,_ type :T.Type,successHandler:@escaping(T?)->(),failHandler:@escaping(Error?,String?)->()){
+    func sendRequest<T:Decodable>(_ request:BaseApiRequest,_ type :T.Type,successHandler:@escaping(T?)->(),failHandler:@escaping(Error?,String?)->()){
         if let request = request.request(){
             AF.request(request).responseJSON(completionHandler: { (reponse) in
                 print(reponse)
