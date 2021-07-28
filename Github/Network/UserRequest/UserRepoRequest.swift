@@ -19,8 +19,7 @@ struct UserRepoRequest: BaseApiRequest {
         }
     }
     
-    init(name: String, parameters: [URLQueryItem]) {
+    init(name: String) {
         self.name = name
-        self.parameters = parameters
     }
 }

@@ -7,5 +7,4 @@
 
 import Foundation
 protocol BaseViewPresenterProtocol: BaseViewProtocol {
-    func reloadUIData()
 }

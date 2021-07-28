@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 protocol SearchCellDelegate: class {
-    func onClickAvatar(at index: Int)
+    func onClickProfile(at index: Int)
 }
 
 final class SearchCell: UITableViewCell {
@@ -20,6 +20,9 @@ final class SearchCell: UITableViewCell {
     @IBOutlet private weak var lblOwnerName: UILabel!
     @IBOutlet private weak var imgAvatar: UIImageView!
     @IBOutlet private weak var btnAvatar: UIButton!
+    @IBOutlet weak var lblWatchedCount: UILabel!
+    @IBOutlet weak var lblForkCount: UILabel!
+    @IBOutlet weak var lblProgrammingLanguage: UILabel!
     //MARK:  END -- IBOutlets
     
     var index: Int!
@@ -30,6 +33,9 @@ final class SearchCell: UITableViewCell {
         self.lblRepoName.text = repo.repoName
         self.lblOwnerName.text = repo.ownerName
         self.imgAvatar.setImage(fromString: repo.imageUrl)
+        self.lblForkCount.text = "\(String(describing: repo.forksCount ?? 0))"
+        self.lblWatchedCount.text = "\(String(describing: repo.watchersCount ?? 0))"
+        self.lblProgrammingLanguage.text = repo.programmingLanguage
     }
     
     override func awakeFromNib() {
@@ -38,6 +44,6 @@ final class SearchCell: UITableViewCell {
     
     
     @IBAction private func onClickAvatar() {
-        delegate?.onClickAvatar(at: index)
+        delegate?.onClickProfile(at: index)
     }
 }

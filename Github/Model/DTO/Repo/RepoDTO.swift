@@ -5,16 +5,16 @@
 //  Created by Bekir on 28.07.2021.
 //
 
-public struct RepoDTO: Decodable {
-    public let id: Int?
-    public let name: String?
-    public let fullName: String?
-    public let owner: RepoOwnerDTO?
-    public let forksCount: Double?
-    public let defaultBranchName: String?
-    public let programmingLanguage: String?
-    public let isPrivate: Bool?
-    
+struct RepoDTO: Decodable {
+    let id: Int?
+    let name: String?
+    let fullName: String?
+    let owner: RepoOwnerDTO?
+    let forksCount: Int?
+    let defaultBranchName: String?
+    let programmingLanguage: String?
+    let isPrivate: Bool?
+    let watchersCount:Int?
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
@@ -24,5 +24,6 @@ public struct RepoDTO: Decodable {
         case programmingLanguage = "language"
         case fullName = "full_name"
         case isPrivate = "private"
+        case watchersCount = "watchers_count"
     }
 }

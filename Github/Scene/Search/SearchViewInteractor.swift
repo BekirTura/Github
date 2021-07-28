@@ -14,7 +14,7 @@ final class SearchViewInteractor:BaseViewInteractor {
 extension SearchViewInteractor: SearchViewInteractorProtocol {
     
     enum SearchViewConstants {
-        static let perPage = 10
+        static let perPage = 100
     }
     func searchRepoRequest(text: String?) {
     
@@ -32,6 +32,7 @@ extension SearchViewInteractor: SearchViewInteractorProtocol {
             self.output?.onSuccessRepoList(repoDTOList: response?.items)
         } failHandler: { error, errorString in
             self.output?.showLoading(isLoad: false)
+            self.output?.onErrorPopup(errorString: errorString ?? "")
         }
     }
 }

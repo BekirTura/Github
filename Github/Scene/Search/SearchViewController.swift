@@ -17,7 +17,7 @@ class SearchViewController: BaseViewController {
 
     var repoList:[RepoPresentation]?
     
-    var presenter: SearchViewPresenter?
+    var presenter: SearchViewPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,12 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
         cell.setUIData(repo: repoList![indexPath.row])
         cell.index = indexPath.row
         cell.delegate = self
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.selectRepo(index: indexPath.row)
     }
     
     
@@ -84,8 +89,10 @@ extension SearchViewController: UISearchBarDelegate {
 
 
 extension SearchViewController: SearchCellDelegate{
-    func onClickAvatar(at index: Int) {
-        print(index)
+    func onClickProfile(at index: Int) {
+        if let name = repoList?[index].ownerName{
+            presenter?.selectProfil(name: name)
+        }
     }
     
 }

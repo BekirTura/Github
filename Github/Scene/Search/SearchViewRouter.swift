@@ -16,7 +16,7 @@ final class SearchViewRouter {
         self.navigationController = navigationController
     }
     
-    static func createModule(using navigationController: UINavigationController? = nil, personId: Int! = nil) -> SearchViewController {
+    static func createModule(using navigationController: UINavigationController? = nil) -> SearchViewController {
         
         let view = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         let router = SearchViewRouter(with: navigationController)
@@ -32,9 +32,13 @@ final class SearchViewRouter {
 }
 
 extension SearchViewRouter: SearchViewRouterProtocol {
-    func navigateToUserDetail(with id: Int) {
-        
+    func navigateToUserDetail(name: String) {
+        let view = ProfilDetailViewRouter.createModule(using: navigationController, name: name)
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
-   
+    func navigateToRepoDetail(repo:RepoPresentation){
+        let view = RepoDetailViewRouter.createModule(using: navigationController, repo: repo)
+        self.navigationController?.pushViewController(view, animated: true)
+    }
 }

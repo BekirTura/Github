@@ -10,17 +10,13 @@ final class SearchViewPresenter:BasePresenter {
     private weak var view: SearchViewProtocol?
     private let router: SearchViewRouterProtocol?
     private let interactor: SearchViewInteractorProtocol?
-        
+    private var repoList:[RepoPresentation]?
   //  var movieDetailPagePresentation: MovieDetailPagePresentation?
     
     init(view: SearchViewProtocol?, router: SearchViewRouterProtocol?, interactor: SearchViewInteractorProtocol?) {
         self.view = view
         self.router = router
         self.interactor = interactor
-    }
-    
-    func getSearchRepo(text: String?){
-        interactor?.searchRepoRequest(text: text)
     }
     
     override func onErrorPopup(errorString: String) {
@@ -37,9 +33,27 @@ extension SearchViewPresenter: SearchViewInteractorOutputProtocol {
         self.view?.activeSearchBar()
         if let repoDTOList = repoDTOList{
             let repoPrensetationList = repoDTOList.map{RepoPresentation(repoDTO: $0)}
+            self.repoList = repoPrensetationList
             view?.reloadUIData(repoPresentationList: repoPrensetationList)
         }else{
             view?.noDataVisible()
         }
+    }
+}
+
+extension SearchViewPresenter: SearchViewPresenterProtocol{
+    func selectProfil(name: String) {
+        router?.navigateToUserDetail(name: name)
+    }
+    
+    func selectRepo(index:Int) {
+        if let repo = repoList?[index]{
+            router?.navigateToRepoDetail(repo: repo)
+        }
+    }
+    
+    
+    func getSearchRepo(text: String?){
+        interactor?.searchRepoRequest(text: text)
     }
 }

@@ -17,6 +17,9 @@ protocol SearchViewInteractorOutputProtocol: BaseOutputProtocol {
 }
 
 protocol SearchViewPresenterProtocol: BaseViewPresenterProtocol {
+    func getSearchRepo(text: String?)
+    func selectProfil(name:String)
+    func selectRepo(index:Int)
 }
 protocol SearchViewProtocol: BaseViewProtocol {
     func reloadUIData(repoPresentationList:[RepoPresentation])
@@ -25,5 +28,6 @@ protocol SearchViewProtocol: BaseViewProtocol {
 }
 
 protocol SearchViewRouterProtocol {
-    func navigateToUserDetail(with id: Int)
+    func navigateToUserDetail(name: String)
+    func navigateToRepoDetail(repo:RepoPresentation)
 }
