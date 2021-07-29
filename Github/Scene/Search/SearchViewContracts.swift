@@ -20,10 +20,13 @@ protocol SearchViewPresenterProtocol: BaseViewPresenterProtocol {
     func getSearchRepo(text: String?)
     func selectProfil(name:String)
     func selectRepo(index:Int)
+    func reset()
 }
 protocol SearchViewProtocol: BaseViewProtocol {
     func reloadUIData(repoPresentationList:[RepoPresentation])
     func noDataVisible()
+    func initView()
+
     func activeSearchBar()
 }
 

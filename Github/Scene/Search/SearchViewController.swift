@@ -36,6 +36,14 @@ class SearchViewController: BaseViewController {
 
 //MARK: SearchViewProtocol
 extension SearchViewController: SearchViewProtocol{
+    func initView() {
+        self.repoList?.removeAll()
+        self.vwNoData.isHidden = true
+        self.tbvRepoList.isHidden = false
+        self.tbvRepoList.reloadData()
+
+    }
+    
     func activeSearchBar() {
         self.searchBar.isUserInteractionEnabled = true
     }
@@ -84,7 +92,11 @@ extension SearchViewController: UISearchBarDelegate {
             self.searchBar.isUserInteractionEnabled = false
             presenter?.getSearchRepo(text: searchText)
         }
+        if searchText == "" {
+            self.presenter?.reset()
+           }
     }
+    
 }
 
 

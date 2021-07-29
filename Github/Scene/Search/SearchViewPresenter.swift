@@ -31,7 +31,7 @@ extension SearchViewPresenter: SearchViewInteractorOutputProtocol {
     
     func onSuccessRepoList(repoDTOList: [RepoDTO]?) {
         self.view?.activeSearchBar()
-        if let repoDTOList = repoDTOList{
+        if let repoDTOList = repoDTOList, repoDTOList.count > 0{
             let repoPrensetationList = repoDTOList.map{RepoPresentation(repoDTO: $0)}
             self.repoList = repoPrensetationList
             view?.reloadUIData(repoPresentationList: repoPrensetationList)
@@ -55,5 +55,11 @@ extension SearchViewPresenter: SearchViewPresenterProtocol{
     
     func getSearchRepo(text: String?){
         interactor?.searchRepoRequest(text: text)
+    }
+    
+    func reset()  {
+        self.repoList?.removeAll()
+        self.repoList = nil
+        view?.initView()
     }
 }
